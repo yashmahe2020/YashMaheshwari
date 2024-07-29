@@ -1,0 +1,284 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Yash Maheshwari - Personal Homepage',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'About', href: '#about' },
+        { text: 'Extracurriculars', href: '#extracurriculars' },
+        { text: 'Projects', href: '#projects' },
+        { text: 'Companies', href: '#companies' },
+        { text: 'Skills', href: '#skills' },
+        { text: 'Certificates', href: '#certificates' },
+      ]}
+      actions={[
+        {
+          variant: 'primary',
+          text: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/yashmaheshwari2009/',
+          target: '_blank',
+          icon: 'tabler:brand-linkedin',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="Yash Maheshwari"
+    tagline="High School Sophomore & Entrepreneur"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/yashmaheshwari2009/',
+        target: '_blank',
+        icon: 'tabler:brand-linkedin',
+      },
+      { text: 'Connect', href: '#connect' },
+    ]}
+  >
+    <Fragment slot="subtitle">
+      I am a highly passionate sophomore at Mountain View High School with a strong interest in computer programming, AI research, machine learning, and related technologies. I am actively seeking internship and research opportunities to apply my technical and leadership skills.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="about"
+    image={{
+      src: '/src/assets/images/yashmaheshwari.jpeg',
+      alt: 'Colorful Image',
+      loading: 'eager',
+    }}
+  >
+
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About Me</h2>
+      <p>
+        I'm Yash Maheshwari, a high school student with a keen interest in technology and innovation. I am the co-founder of Novus Innovation LLC, Tech Spark, and Emploma. Through these companies, I have been pursuing my passion of entrepreneurship and helping others.
+      </p>
+      <br />
+      <p>
+        In addition to my academic pursuits, I enjoy engaging in outdoor activities and exploring new technologies. My goal is to leverage my experience in software development and entrepreneurship to make a positive impact.
+      </p>
+      <br />
+      <p>If you'd like to connect or learn more about my work, follow me on <a style="text-decoration: underline;" href="https://www.linkedin.com/in/yashmaheshwari2009/">LinkedIn</a> or send me an email at <a href="#connect" style="text-decoration: underline;" >yashmahe2018@gmail.com</a>.</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Extracurriculars Widget **************** -->
+
+  <Steps
+    id="extracurriculars"
+    title="Extracurriculars"
+    subtitle="Here are some of my roles and activities outside of school."
+    columns={1}
+    items={[
+      {
+        title: 'Lead Java Instructor, FTC Robotics Team',
+        date: 'April 2024 - Present',
+        description: '- Providing Java coaching to a local FTC team alongside a robotics professor from the University of Wisconsin. <br> - Organizing and facilitating technical workshops and hands-on training sessions.',
+      },
+      {
+        title: 'Generative AI Researcher, ASDRP',
+        date: 'January 2024 - Present',
+        description: '- Researching application of large language models in regards to chemistry and predicting reactions.',
+      },
+      {
+        title: 'Software Student, FRC Team 971',
+        date: 'June 2023 - Present',
+        description: "- Working alongside seasoned mentors to develop the software for 971's Robot.",
+      },
+      {
+        title: 'Software Lead, FRC Team 9584',
+        date: 'December 2023 - May 2024',
+        description: '- Led software development in C++, mentored students, and managed version control via Gerrit. <br> - Was 1 of 2 team representatives elected to speak to judges during competitions. <br> - Was invited to the 2024 Robotics World Championship in Houston and ranked as the 1st Rookie Team in our Division. <br> - Was the technician and software in the pit for 9584 during the San Francisco Regional and World Championship.',
+      },
+      {
+        title: 'Lead Instructor, Python Computer Programming Classes',
+        date: 'April 2020 - August 2020',
+        description: ' - Developed Python curriculum for beginner to intermediate level students. <br> - Taught dozens of local elementary school students the basics of programming in Python.',
+      },
+    ]}
+  />
+
+  <!-- Projects Widget **************** -->
+
+  <Steps
+    id="projects"
+    title="Projects"
+    subtitle="Explore some of my projects where I have applied my skills and knowledge."
+    columns={1}
+    items={[
+      {
+        title: 'Battle Timz Card Game',
+        date: 'Apr 2021 - Present',
+        description: '- Designed Battle Timz Card Game with Canva. <br> - Ran a local testing campaign to get feedback & reiterate on the product. <br> - Crowdfunded over $1000 on Kickstarter to manufacture the game. <br> - Developed an intensive marketing strategy resulting in over 100 units sold in the first week.',
+      },
+      {
+        title: 'MyChitChatApp',
+        date: 'Jul 2020 - September 2020',
+        description: '- Designed MyChitChatApp to communicate with friends and family without a phone number. <br> - Developed the app using Xcode, Swift, and Firebase.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
+      alt: 'Project Image',
+    }}
+  />
+
+  <!-- Companies Widget **************** -->
+
+  <Steps
+    id="companies"
+    title="Companies"
+    subtitle="Learn more about the companies I have founded and worked with."
+    columns={1}
+    items={[
+      {
+        title: 'Emploma',
+        date: "July 2024 - Present",
+        description: ' - Co-founded a company dedicated to connecting talented college students and graduates with jobs. <br> - Developing the product using html, css, tailwind, javascript, flask, and firebase.',
+        link: 'https://emploma.com', // Replace with actual link if available
+      },
+      {
+        title: 'Tech Spark',
+        date: "January 2024 - Present",
+        description: ' - Co-founded a non-profit organization to educate students in robotics and computer programming. <br> - Leading summer camps to help elementary and middle school students explore STEM.',
+        link: 'https://techspark.org', // Replace with actual link if available
+      },
+      {
+        title: 'Novus Innovation LLC',
+        date: "April 2021 - January 2024",
+        description: ' - Founded and led a company that successfully launched Battle Timz Card Game. <br> - Handled negotiations with manufacturers in China.',
+        link: 'https://novusinnovationllc.com', // Replace with actual link if available
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    id="skills"
+    title="Skills"
+    subtitle="Discover the proficiencies that allow me to excel in the tech field."
+    columns={3}
+    defaultIcon="tabler:point-filled"
+    items={[
+      {
+        title: 'Programming Languages',
+        description: 'Python, Java, C++',
+      },
+      {
+        title: 'Python Libraries',
+        description: 'Tensorflow, numpy, matplotlib',
+      },
+      {
+        title: 'Front-End Development',
+        description: 'HTML, CSS, JavaScript',
+      },
+      {
+        title: 'Back-End Development',
+        description: 'JavaScript, Flask, Django, Python, Firebase',
+      },
+      {
+        title: 'Version Control',
+        description: 'Github, Gerrit',
+      },
+      {
+        title: 'App Development',
+        description: 'Xcode, Swift',
+      },
+    ]}
+  />
+
+  <!-- Licenses & Certificates Widget ********** -->
+
+  <Steps
+    id="certificates"
+    title="Licenses & Certificates"
+    subtitle="Here are some of the certifications I have earned."
+    columns={1}
+    items={[
+      {
+        title: 'Introduction to Web Development with HTML, CSS, JavaScript',
+        issuer: 'IBM',
+        date: 'Sep 2023',
+        credentialId: 'CGB2RRK9JRMA',
+        link: 'https://www.ibm.com',
+      },
+      {
+        title: 'Python for Data Science, AI & Development',
+        issuer: 'IBM',
+        date: 'Aug 2023',
+        credentialId: 'P8MLUPA7HWU2',
+        link: 'https://www.ibm.com',
+      },
+      {
+        title: 'Codes, Ciphers, and Cryptography: An Introduction through Math',
+        issuer: 'Brown University',
+        date: 'Jul 2023',
+        credentialId: 'CeDiD: 247E-WTYM-YQIR',
+        link: 'https://www.brown.edu',
+      },
+      {
+        title: 'ISTS/GenCyber Cybersecurity Certificate',
+        issuer: 'Dartmouth College',
+        date: 'Jun 2023',
+        link: 'https://www.dartmouth.edu',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    id="connect"
+    title="Let's Connect"
+    subtitle="Interested in working together on a project or internship?"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/yashmaheshwari2009/',
+        target: '_blank',
+        icon: 'tabler:brand-linkedin',
+      },
+      {
+        text: 'Email',
+        href: 'mailto:yashmahe2018@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        text: 'Phone',
+        href: 'tel:+16502084653',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
+</Layout>
