@@ -12,6 +12,7 @@ import compress from 'astro-compress';
 
 import astrowind from './vendor/integration';
 
+
 import {
   readingTimeRemarkPlugin,
   responsiveTablesRehypePlugin,
