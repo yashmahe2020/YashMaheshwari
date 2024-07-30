@@ -25,6 +25,7 @@ const metadata = {
         { text: 'Companies', href: '#companies' },
         { text: 'Skills', href: '#skills' },
         { text: 'Certificates', href: '#certificates' },
+        { text: 'Awards', href: '#awards' },
       ]}
       actions={[
         {
@@ -76,14 +77,16 @@ const metadata = {
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About Me</h2>
       <p>
-        I'm Yash Maheshwari, a high school student with a keen interest in technology and innovation. I am the co-founder of Novus Innovation LLC, Tech Spark, and Emploma. Through these companies, I have been pursuing my passion of entrepreneurship and helping others.
+        I'm Yash Maheshwari, a high school student with a keen interest in technology and innovation. I am the co-founder of Novus Innovation LLC, Tech Spark, and Emploma. Through these companies, I have been pursuing my passion for entrepreneurship and helping others.
+
       </p>
       <br />
       <p>
-        In addition to my academic pursuits, I enjoy engaging in outdoor activities and exploring new technologies. My goal is to leverage my experience in software development and entrepreneurship to make a positive impact.
+        In addition to my academic pursuits, I enjoy sports, including basketball and running, as well as software development using various coding languages. My goal is to leverage my experience in software development and entrepreneurship to make a positive impact.
       </p>
       <br />
-      <p>If you'd like to connect or learn more about my work, follow me on <a style="text-decoration: underline;" href="https://www.linkedin.com/in/yashmaheshwari2009/">LinkedIn</a> or send me an email at <a href="#connect" style="text-decoration: underline;" >yashmahe2018@gmail.com</a>.</p>
+      
+      <p>If you'd like to connect or learn more about my work, follow me on <a target=”_blank” style="text-decoration: underline;" href="https://www.linkedin.com/in/yashmaheshwari2009/">LinkedIn</a> or send me an email at <a href='mailto:yashmahe2018@gmail.com' style="text-decoration: underline;" >yashmahe2018@gmail.com</a>.</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -138,7 +141,7 @@ const metadata = {
       {
         title: 'Battle Timz Card Game',
         date: 'Apr 2021 - Present',
-        description: '- Designed Battle Timz Card Game with Canva. <br> - Ran a local testing campaign to get feedback & reiterate on the product. <br> - Crowdfunded over $1000 on Kickstarter to manufacture the game. <br> - Developed an intensive marketing strategy resulting in over 100 units sold in the first week.',
+        description: '- Designed Battle Timz Card Game with Canva and had the game manufactured in China. <br> - Ran a local testing campaign to get feedback & reiterate on the product. <br> - Crowdfunded over $1000 on Kickstarter to manufacture the game. <br> - Developed an intensive marketing strategy resulting in over 100 units sold in the first week.',
       },
       {
         title: 'MyChitChatApp',
@@ -157,7 +160,7 @@ const metadata = {
   <Steps
     id="companies"
     title="Companies"
-    subtitle="Learn more about the companies I have founded and worked with."
+    subtitle="Learn more about the companies and non-profits I have founded and worked with."
     columns={1}
     items={[
       {
@@ -175,7 +178,7 @@ const metadata = {
       {
         title: 'Novus Innovation LLC',
         date: "April 2021 - January 2024",
-        description: ' - Founded and led a company that successfully launched Battle Timz Card Game. <br> - Handled negotiations with manufacturers in China.',
+        description: " - Founded and led a company that successfully launched Battle Timz Card Game. <br> - Handled negotiations with manufacturers in China. <br> - Featured in the Los Altos Town Crier and my school's yearbook.",
         link: 'https://novusinnovationllc.com', // Replace with actual link if available
       },
     ]}
@@ -251,6 +254,32 @@ const metadata = {
         issuer: 'Dartmouth College',
         date: 'Jun 2023',
         link: 'https://www.dartmouth.edu',
+      },
+    ]}
+  />
+
+  <!-- Awards & Achievements Widget ********** -->
+
+  <Steps
+    id="awards"
+    title="Awards & Achievements"
+    subtitle="Here are some of the accolades I have received."
+    columns={1}
+    items={[
+      {
+        title: 'USA Computing Olympiad (USACO)',
+        date: 'January 2024 - Present',
+        description: '- Scored 1000 in Bronze level and am preparing for Silver and Gold for the next competition season.',
+      },
+      {
+        title: 'Local Hackathon Competition',
+        date: 'Garbage Identifier App',
+        description: '- Won the most popular award for developing a garbage identifier app powered by a self-trained neural network.',
+      },
+      {
+        title: 'Chess Competitor',
+        date: 'September 2015 - Present',
+        description: '- Achieved 1st place in numerous local competitions and reached a peak rating of over 2,000 elo.',
       },
     ]}
   />
